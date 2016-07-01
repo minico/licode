@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="erizoapi\addon.cc" />
+    <ClCompile Include="erizoapi\ExternalInput.cc" />
+    <ClCompile Include="erizoapi\ExternalOutput.cc" />
+    <ClCompile Include="erizoapi\OneToManyProcessor.cc" />
+    <ClCompile Include="erizoapi\OneToManyTranscoder.cc" />
+    <ClCompile Include="erizoapi\WebRtcConnection.cc" />
+    <ClCompile Include="erizo\src\erizo\DtlsTransport.cpp" />
+    <ClCompile Include="erizo\src\erizo\dtls\bf_dwrap.c" />
+    <ClCompile Include="erizo\src\erizo\dtls\DtlsClient.cpp" />
+    <ClCompile Include="erizo\src\erizo\dtls\DtlsSocket.cpp" />
+    <ClCompile Include="erizo\src\erizo\dtls\DtlsTimer.cpp" />
+    <ClCompile Include="erizo\src\erizo\dtls\OpenSSLInit.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\codecs\AudioCodec.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\codecs\VideoCodec.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\ExternalInput.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\ExternalOutput.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\MediaProcessor.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\mixers\VideoMixer.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\mixers\VideoUtils.cpp" />
+    <ClCompile Include="erizo\src\erizo\media\OneToManyTranscoder.cpp" />
+    <ClCompile Include="erizo\src\erizo\NiceConnection.cpp" />
+    <ClCompile Include="erizo\src\erizo\OneToManyProcessor.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtcpAggregator.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtcpForwarder.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpExtensionProcessor.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpPacketQueue.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpSink.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpSource.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpVP8Fragmenter.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\RtpVP8Parser.cpp" />
+    <ClCompile Include="erizo\src\erizo\rtp\webrtc\fec_receiver_impl.cc" />
+    <ClCompile Include="erizo\src\erizo\rtp\webrtc\forward_error_correction.cc" />
+    <ClCompile Include="erizo\src\erizo\rtp\webrtc\forward_error_correction_internal.cc" />
+    <ClCompile Include="erizo\src\erizo\rtp\webrtc\rtp_utility.cc" />
+    <ClCompile Include="erizo\src\erizo\SdpInfo.cpp" />
+    <ClCompile Include="erizo\src\erizo\SrtpChannel.cpp" />
+    <ClCompile Include="erizo\src\erizo\Stats.cpp" />
+    <ClCompile Include="erizo\src\erizo\StringUtil.cpp" />
+    <ClCompile Include="erizo\src\erizo\WebRtcConnection.cpp" />
+    <ClCompile Include="erizo\src\examples\hsam.cpp" />
+    <ClCompile Include="erizo\src\examples\pc\Observer.cpp" />
+    <ClCompile Include="erizo\src\examples\pc\PCSocket.cpp" />
+    <ClCompile Include="erizo\src\examples\Test.cpp" />
+    <ClCompile Include="erizo\src\test\main.cpp" />
+    <ClCompile Include="erizo\src\test\PacketTest.cpp" />
+    <ClCompile Include="erizo\src\test\SdpTest.cpp" />
+    <ClCompile Include="third_party\srtp\crypto\ae_xfm\xfm.c" />
+    <ClCompile Include="third_party\srtp\crypto\cipher\aes.c" />
+    <ClCompile Include="third_party\srtp\crypto\cipher\aes_cbc.c" />
+    <ClCompile Include="third_party\srtp\crypto\cipher\aes_icm.c" />
+    <ClCompile Include="third_party\srtp\crypto\cipher\cipher.c" />
+    <ClCompile Include="third_party\srtp\crypto\cipher\null_cipher.c" />
+    <ClCompile Include="third_party\srtp\crypto\hash\auth.c" />
+    <ClCompile Include="third_party\srtp\crypto\hash\hmac.c" />
+    <ClCompile Include="third_party\srtp\crypto\hash\null_auth.c" />
+    <ClCompile Include="third_party\srtp\crypto\hash\sha1.c" />
+    <ClCompile Include="third_party\srtp\crypto\kernel\alloc.c" />
+    <ClCompile Include="third_party\srtp\crypto\kernel\crypto_kernel.c" />
+    <ClCompile Include="third_party\srtp\crypto\kernel\err.c" />
+    <ClCompile Include="third_party\srtp\crypto\kernel\key.c" />
+    <ClCompile Include="third_party\srtp\crypto\math\datatypes.c" />
+    <ClCompile Include="third_party\srtp\crypto\math\gf2_8.c" />
+    <ClCompile Include="third_party\srtp\crypto\math\math.c" />
+    <ClCompile Include="third_party\srtp\crypto\math\stat.c" />
+    <ClCompile Include="third_party\srtp\crypto\replay\rdb.c" />
+    <ClCompile Include="third_party\srtp\crypto\replay\rdbx.c" />
+    <ClCompile Include="third_party\srtp\crypto\replay\ut_sim.c" />
+    <ClCompile Include="third_party\srtp\crypto\rng\ctr_prng.c" />
+    <ClCompile Include="third_party\srtp\crypto\rng\prng.c" />
+    <ClCompile Include="third_party\srtp\crypto\rng\rand_linux_kernel.c" />
+    <ClCompile Include="third_party\srtp\crypto\rng\rand_source.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\aes_calc.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\auth_driver.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\cipher_driver.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\datatypes_driver.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\env.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\kernel_driver.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\rand_gen.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\sha1_driver.c" />
+    <ClCompile Include="third_party\srtp\crypto\test\stat_driver.c" />
+    <ClCompile Include="third_party\srtp\srtp\ekt.c" />
+    <ClCompile Include="third_party\srtp\srtp\srtp.c" />
+    <ClCompile Include="third_party\srtp\tables\aes_tables.c" />
+    <ClCompile Include="third_party\srtp\test\dtls_srtp_driver.c" />
+    <ClCompile Include="third_party\srtp\test\getopt_s.c" />
+    <ClCompile Include="third_party\srtp\test\lfsr.c" />
+    <ClCompile Include="third_party\srtp\test\rdbx_driver.c" />
+    <ClCompile Include="third_party\srtp\test\replay_driver.c" />
+    <ClCompile Include="third_party\srtp\test\roc_driver.c" />
+    <ClCompile Include="third_party\srtp\test\rtp.c" />
+    <ClCompile Include="third_party\srtp\test\rtpw.c" />
+    <ClCompile Include="third_party\srtp\test\srtp_driver.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="erizo_controller\common\amqper.js" />
+    <None Include="erizo_controller\common\logger.js" />
+    <None Include="erizo_controller\erizoagent\erizoAgent.js" />
+    <None Include="erizo_controller\erizoagent\erizoAgentReporter.js" />
+    <None Include="erizo_controller\erizoclient\extras\chrome-extension\script.js" />
+    <None Include="erizo_controller\erizoclient\extras\firefox-extension\bootstrap.js" />
+    <None Include="erizo_controller\erizoclient\lib\socket.io.js" />
+    <None Include="erizo_controller\erizoclient\src\Connection.js" />
+    <None Include="erizo_controller\erizoclient\src\Events.js" />
+    <None Include="erizo_controller\erizoclient\src\Room.js" />
+    <None Include="erizo_controller\erizoclient\src\Stream.js" />
+    <None Include="erizo_controller\erizoclient\src\utils\L.Base64.js" />
+    <None Include="erizo_controller\erizoclient\src\utils\L.Logger.js" />
+    <None Include="erizo_controller\erizoclient\src\utils\L.Resizer.js" />
+    <None Include="erizo_controller\erizoclient\src\views\AudioPlayer.js" />
+    <None Include="erizo_controller\erizoclient\src\views\Bar.js" />
+    <None Include="erizo_controller\erizoclient\src\views\Speaker.js" />
+    <None Include="erizo_controller\erizoclient\src\views\VideoPlayer.js" />
+    <None Include="erizo_controller\erizoclient\src\views\View.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\BowserStack.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\ChromeCanaryStack.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\ChromeRoapStack.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\ChromeStableStack.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\FcStack.js" />
+    <None Include="erizo_controller\erizoclient\src\webrtc-stacks\FirefoxStack.js" />
+    <None Include="erizo_controller\erizocontroller\ch_policies\default_policy.js" />
+    <None Include="erizo_controller\erizocontroller\ecch.js" />
+    <None Include="erizo_controller\erizocontroller\erizoController.js" />
+    <None Include="erizo_controller\erizocontroller\permission.js" />
+    <None Include="erizo_controller\erizocontroller\roomController.js" />
+    <None Include="erizo_controller\erizocontroller\rpc\rpcPublic.js" />
+    <None Include="erizo_controller\erizocontroller\Stream.js" />
+    <None Include="erizo_controller\erizojs\adapt_schemes\notify-break-recover.js" />
+    <None Include="erizo_controller\erizojs\adapt_schemes\notify-break.js" />
+    <None Include="erizo_controller\erizojs\adapt_schemes\notify.js" />
+    <None Include="erizo_controller\erizojs\erizoJS.js" />
+    <None Include="erizo_controller\erizojs\erizoJSController.js" />
+    <None Include="erizo_controller\erizojs\rpc\rpcPublic.js" />
+    <None Include="extras\basic_example\basicServer.js" />
+    <None Include="extras\basic_example\public\connection_test.html" />
+    <None Include="extras\basic_example\public\connection_test.js" />
+    <None Include="extras\basic_example\public\index.html" />
+    <None Include="extras\basic_example\public\script.js" />
+    <None Include="nuve\nuveapi\auth\mauthParser.js" />
+    <None Include="nuve\nuveapi\auth\nuveAuthenticator.js" />
+    <None Include="nuve\nuveapi\ch_policies\default_policy.js" />
+    <None Include="nuve\nuveapi\cloudHandler.js" />
+    <None Include="nuve\nuveapi\logger.js" />
+    <None Include="nuve\nuveapi\mdb\dataBase.js" />
+    <None Include="nuve\nuveapi\mdb\roomRegistry.js" />
+    <None Include="nuve\nuveapi\mdb\serviceRegistry.js" />
+    <None Include="nuve\nuveapi\mdb\tokenRegistry.js" />
+    <None Include="nuve\nuveapi\nuve.js" />
+    <None Include="nuve\nuveapi\resource\roomResource.js" />
+    <None Include="nuve\nuveapi\resource\roomsResource.js" />
+    <None Include="nuve\nuveapi\resource\serviceResource.js" />
+    <None Include="nuve\nuveapi\resource\servicesResource.js" />
+    <None Include="nuve\nuveapi\resource\tokensResource.js" />
+    <None Include="nuve\nuveapi\resource\userResource.js" />
+    <None Include="nuve\nuveapi\resource\usersResource.js" />
+    <None Include="nuve\nuveapi\rpc\rpc.js" />
+    <None Include="nuve\nuveapi\rpc\rpcPublic.js" />
+    <None Include="nuve\nuveclient\lib\xmlhttprequest.js" />
+    <None Include="nuve\nuveclient\src\hmac-sha1.js" />
+    <None Include="nuve\nuveclient\src\N.API.js" />
+    <None Include="nuve\nuveclient\src\N.Base64.js" />
+    <None Include="nuve\nuveclient\src\N.js" />
+    <None Include="nuve\nuveclient_python\nuve.py" />
+    <None Include="scripts\licode_default.js" />
+    <None Include="spine\logger.js" />
+    <None Include="spine\nativeClient.js" />
+    <None Include="spine\NativeStack.js" />
+    <None Include="spine\runSpineClients.js" />
+    <None Include="spine\simpleNativeConnection.js" />
+    <None Include="test\erizo-test.js" />
+    <None Include="test\karma.conf.js" />
+    <None Include="test\nuve-api-spec.js" />
+    <None Include="test\spine-tests.js" />
+    <None Include="third_party\srtp\srtp.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="erizoapi\ExternalInput.h" />
+    <ClInclude Include="erizoapi\ExternalOutput.h" />
+    <ClInclude Include="erizoapi\MediaDefinitions.h" />
+    <ClInclude Include="erizoapi\OneToManyProcessor.h" />
+    <ClInclude Include="erizoapi\OneToManyTranscoder.h" />
+    <ClInclude Include="erizoapi\WebRtcConnection.h" />
+    <ClInclude Include="erizo\src\erizo\DtlsTransport.h" />
+    <ClInclude Include="erizo\src\erizo\dtls\bf_dwrap.h" />
+    <ClInclude Include="erizo\src\erizo\dtls\config.h" />
+    <ClInclude Include="erizo\src\erizo\dtls\DtlsSocket.h" />
+    <ClInclude Include="erizo\src\erizo\dtls\DtlsTimer.h" />
+    <ClInclude Include="erizo\src\erizo\dtls\OpenSSLInit.h" />
+    <ClInclude Include="erizo\src\erizo\logger.h" />
+    <ClInclude Include="erizo\src\erizo\MediaDefinitions.h" />
+    <ClInclude Include="erizo\src\erizo\media\codecs\AudioCodec.h" />
+    <ClInclude Include="erizo\src\erizo\media\codecs\Codecs.h" />
+    <ClInclude Include="erizo\src\erizo\media\codecs\VideoCodec.h" />
+    <ClInclude Include="erizo\src\erizo\media\ExternalInput.h" />
+    <ClInclude Include="erizo\src\erizo\media\ExternalOutput.h" />
+    <ClInclude Include="erizo\src\erizo\media\MediaProcessor.h" />
+    <ClInclude Include="erizo\src\erizo\media\mixers\VideoMixer.h" />
+    <ClInclude Include="erizo\src\erizo\media\mixers\VideoUtils.h" />
+    <ClInclude Include="erizo\src\erizo\media\OneToManyTranscoder.h" />
+    <ClInclude Include="erizo\src\erizo\NiceConnection.h" />
+    <ClInclude Include="erizo\src\erizo\OneToManyProcessor.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtcpAggregator.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtcpForwarder.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtcpProcessor.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpExtensionProcessor.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpHeaders.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpPacketQueue.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpSink.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpSource.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpVP8Fragmenter.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\RtpVP8Parser.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\fec_private_tables_bursty.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\fec_private_tables_random.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\fec_receiver_impl.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\forward_error_correction.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\forward_error_correction_internal.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\rtp_utility.h" />
+    <ClInclude Include="erizo\src\erizo\rtp\webrtc\scoped_refptr.h" />
+    <ClInclude Include="erizo\src\erizo\SdpInfo.h" />
+    <ClInclude Include="erizo\src\erizo\SrtpChannel.h" />
+    <ClInclude Include="erizo\src\erizo\Stats.h" />
+    <ClInclude Include="erizo\src\erizo\StringUtil.h" />
+    <ClInclude Include="erizo\src\erizo\Transport.h" />
+    <ClInclude Include="erizo\src\erizo\WebRtcConnection.h" />
+    <ClInclude Include="erizo\src\examples\pc\Observer.h" />
+    <ClInclude Include="erizo\src\examples\pc\PCSocket.h" />
+    <ClInclude Include="erizo\src\examples\pc\SDPReceiver.h" />
+    <ClInclude Include="erizo\src\examples\Test.h" />
+    <ClInclude Include="third_party\srtp\config_in.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\aes.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\aes_cbc.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\aes_icm.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\alloc.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\auth.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\cipher.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\crypto.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\cryptoalg.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\crypto_kernel.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\crypto_math.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\crypto_types.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\datatypes.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\err.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\gf2_8.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\hmac.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\integers.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\kernel_compat.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\key.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\null_auth.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\null_cipher.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\prng.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\rand_source.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\rdb.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\rdbx.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\sha1.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\stat.h" />
+    <ClInclude Include="third_party\srtp\crypto\include\xfm.h" />
+    <ClInclude Include="third_party\srtp\include\ekt.h" />
+    <ClInclude Include="third_party\srtp\include\getopt_s.h" />
+    <ClInclude Include="third_party\srtp\include\rtp.h" />
+    <ClInclude Include="third_party\srtp\include\rtp_priv.h" />
+    <ClInclude Include="third_party\srtp\include\srtp.h" />
+    <ClInclude Include="third_party\srtp\include\srtp_priv.h" />
+    <ClInclude Include="third_party\srtp\include\ut_sim.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
